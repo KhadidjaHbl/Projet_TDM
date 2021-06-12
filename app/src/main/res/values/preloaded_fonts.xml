@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/abhaya_libre_medium</item>
+        <item>@font/amiri</item>
+        <item>@font/andada</item>
+        <item>@font/antic</item>
+        <item>@font/arima_madurai_medium</item>
+        <item>@font/artifika</item>
+        <item>@font/autour_one</item>
+        <item>@font/bangers</item>
+        <item>@font/coiny</item>
+    </array>
+</resources>

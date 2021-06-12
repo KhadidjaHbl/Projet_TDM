@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/medecin"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="364dp"
+        android:layout_height="126dp"
+        android:layout_marginBottom="6dp"
+        android:background="@drawable/element_list"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent=".9">
+
+        <TextView
+            android:id="@+id/nom"
+            android:layout_width="59dp"
+            android:layout_height="21dp"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
+            app:layout_constraintStart_toEndOf="@+id/textView4" />
+
+
+        <TextView
+            android:id="@+id/prenom"
+            android:layout_width="87dp"
+            android:layout_height="23dp"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/nom"
+            app:layout_constraintStart_toEndOf="@+id/nom" />
+
+        <TextView
+            android:id="@+id/num"
+            android:layout_width="96dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/specialite"
+            app:layout_constraintTop_toBottomOf="@+id/specialite" />
+
+        <TextView
+            android:id="@+id/specialite"
+            android:layout_width="95dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="TextView"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/photo"
+            android:layout_width="78dp"
+            android:layout_height="83dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/buttonround"
+            android:elevation="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.087"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="26dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="28dp"
+            android:fontFamily="@font/arima_madurai_medium"
+            android:text="Dr."
+            android:textColor="#000000"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/photo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginLeft="48dp"
+            android:layout_marginBottom="24dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/num" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
