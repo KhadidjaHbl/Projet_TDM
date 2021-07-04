@@ -11,7 +11,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Projet_tdm">
-        <activity android:name=".Activities.MedecinHome"></activity>
+        <activity android:name=".Activities.PatientActivity"></activity>
+        <activity android:name=".Activities.TreatmentsActivity" />
+        <activity android:name=".Fragements.TraitementsActivity" />
+        <activity android:name=".Activities.MedecinHome" />
         <activity android:name=".Activities.PatientHome" />
         <activity android:name=".Activities.LoginActivity">
             <intent-filter>

@@ -1,60 +1,55 @@
 package com.example.projet_tdm.Fragements
 
+import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.Fragment
+import androidx.work.*
+import com.example.projet_tdm.Entities.Conseil
 import com.example.projet_tdm.R
+import com.example.projet_tdm.Retrofit.RetrofitService
+import com.example.projet_tdm.RoomDao.RoomService
+import com.example.projet_tdm.Service.SyncService
+import kotlinx.android.synthetic.main.fragment_advice.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [AdviceFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class AdviceFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_advice, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment AdviceFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            AdviceFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val pref = this.requireActivity().getSharedPreferences("data", Context.MODE_PRIVATE)
+        var idUser = pref.getInt("idUser", 0)
+        Toast.makeText(context, "iddd"+idUser, Toast.LENGTH_SHORT).show()
+
+        send.setOnClickListener() { View ->
+            val cont: String = message.text.toString()
+            val id = arguments?.getInt("idmedecin")
+            val conseilContent = Conseil(idUser, cont, id, 0)
+            RoomService.context=this.requireActivity()
+            RoomService.appDataBase.getConseilDao().addConseil(conseilContent)
+            scheduleSycn()
+        }
+    }
+
+    private fun scheduleSycn() {
+        val constraints = Constraints.Builder().setRequiredNetworkType(NetworkType.UNMETERED).
+            //    setRequiresBatteryNotLow(true).
+        build()
+        val req = OneTimeWorkRequest.Builder(SyncService::class.java).setConstraints(constraints)
+            .addTag("id1").build()
+        val workManager = WorkManager.getInstance(requireActivity())
+        workManager.enqueueUniqueWork("work", ExistingWorkPolicy.REPLACE, req)
     }
 }

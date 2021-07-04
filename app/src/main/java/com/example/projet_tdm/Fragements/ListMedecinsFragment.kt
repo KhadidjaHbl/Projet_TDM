@@ -1,7 +1,7 @@
 package com.example.tp3
 
 import CategorieAdapter
-import MyAdapter
+import ListMedecinsAdapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,44 +10,26 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.projet_tdm.Entities.CategorieRecyclerV
 import com.example.projet_tdm.R
 import com.example.projet_tdm.Retrofit.RetrofitService
-import kotlinx.android.synthetic.main.fragment_list.*
+import kotlinx.android.synthetic.main.fragment_list_medecins.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class ListFragment : Fragment() {
+class ListMedecinsFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false)
+        return inflater.inflate(R.layout.fragment_list_medecins, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        /* val pref = this.requireActivity().getSharedPreferences("pref", Context.MODE_PRIVATE)
-         val id = pref.getInt("idUser",0)
-         val call = RetrofitService.endpoint.getPatient(id)
-         Toast.makeText(context, "calll"+ call.toString(),Toast.LENGTH_LONG).show();
-
-         call.enqueue(object : Callback<Patient> {
-             override fun onResponse(call: Call<Patient>, response: Response<Patient>) {
-                 if (response.isSuccessful) {
-                     val nomPat = response.body()?.nom
-                     welcome.text = nomPat
-                 }
-             }
-             override fun onFailure(call: Call<Patient>, t: Throwable) {
-                 Toast.makeText(context, "Error", Toast.LENGTH_LONG).show();
-             }
-         })*/
 
         listMedecins.layoutManager =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.VERTICAL, false)
@@ -62,8 +44,6 @@ class ListFragment : Fragment() {
         items.add(CategorieRecyclerV(R.drawable.ophta,   "Ophtalmologie"))
         items.add(CategorieRecyclerV(R.drawable.immuno,   "Immunologie"))
 
-
-
         categories.layoutManager =
             LinearLayoutManager(requireActivity(), LinearLayoutManager.HORIZONTAL, false)
         categories.adapter=CategorieAdapter(requireActivity(),items)
@@ -72,29 +52,27 @@ class ListFragment : Fragment() {
     fun getdoctors() {
 
         val call = RetrofitService.endpoint.getMedcins()
-        call.enqueue(object : Callback<List<MainViewModel>> {
+        call.enqueue(object : Callback<List<MedecinViewModel>> {
 
             override fun onResponse(
-                call: Call<List<MainViewModel>>,
-                response: Response<List<MainViewModel>>
+                call: Call<List<MedecinViewModel>>,
+                response: Response<List<MedecinViewModel>>
             ) {
                 if (response.code() == 200) {
                     val data = response.body()
                     if (data != null) {
-                        val vm = ViewModelProvider(requireActivity()).get(MainViewModel::class.java)
-                        listMedecins.adapter = MyAdapter(requireActivity(), data, vm)
+                        val vm = ViewModelProvider(requireActivity()).get(MedecinViewModel::class.java)
+                        listMedecins.adapter = ListMedecinsAdapter(requireActivity(), data, vm)
                     }
                 } else {
-
+                    Toast.makeText(context, "UNE ERREUR S'EST PRODUITE", Toast.LENGTH_SHORT).show()
                 }
             }
 
-            override fun onFailure(call: Call<List<MainViewModel>>, t: Throwable) {
+            override fun onFailure(call: Call<List<MedecinViewModel>>, t: Throwable) {
                 Toast.makeText(context, "UNE ERREUR S'EST PRODUITE", Toast.LENGTH_SHORT).show()
             }
-
         });
-
 
     }
 

@@ -28,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
         val Patconn = pref.getBoolean("patConnected", false)
         val idUser = pref.getInt("idUser", 0)
 
-        val patientHome = Intent(this, PatientHome::class.java)
+        val patientHome = Intent(this, PatientActivity::class.java)
         val medecinHome = Intent(this, MedecinHome::class.java)
 
 

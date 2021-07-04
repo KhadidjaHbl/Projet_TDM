@@ -5,7 +5,7 @@ import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
 @Entity(
-    tableName = "bookings", foreignKeys = arrayOf(
+    tableName = "patients", foreignKeys = arrayOf(
         ForeignKey(
             entity =
             User::class, parentColumns = arrayOf("idUser"),
@@ -16,9 +16,9 @@ import androidx.room.PrimaryKey
 )
 
 data class Patient(
-    val idUser: Int?,
+    val idUser: Int,
     val nom: String?,
-    val prenom: String?,
+    val prenom: String?
 )
 
 @PrimaryKey(autoGenerate = true)
