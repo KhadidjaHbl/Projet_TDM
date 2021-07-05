@@ -18,7 +18,11 @@ import androidx.room.PrimaryKey
 data class Patient(
     val idUser: Int,
     val nom: String?,
-    val prenom: String?
+    val prenom: String?,
+    val photo:String?,
+    val Adresse:String?,
+    val Age:Int,
+    val Email:String
 )
 
 @PrimaryKey(autoGenerate = true)

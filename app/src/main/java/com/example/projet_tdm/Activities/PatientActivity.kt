@@ -79,6 +79,12 @@ class PatientActivity : AppCompatActivity() {
             finish()
         }
 
+        profile.setOnClickListener(){
+            profile.findNavController().navigate(R.id.action_ListFragment_to_profileFragment3)
+        }
+
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {

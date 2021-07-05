@@ -3,36 +3,68 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?android:attr/colorBackground">
+    android:layout_height="match_parent">
 
     <CalendarView
         android:id="@+id/calendarViewr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="23dp"
+        android:focusedMonthDateColor="#22C6B9"
+        android:foregroundGravity="center"
+        android:selectedWeekBackgroundColor="#22C6B9"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="342dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.272"
+        app:layout_constraintStart_toStartOf="@+id/calendarViewr"
         app:layout_constraintTop_toBottomOf="@+id/calendarViewr" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="115dp"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/artifika"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center"
+        android:text="Réservez un Rendez-Vous"
+        android:textColor="#22C6B9"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/calendarViewr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/reserv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="255dp"
-        android:text="Reserver"
+        android:layout_width="211dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="93dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="94dp"
+        android:background="@drawable/buttonround"
+        android:backgroundTint="#22C6B9"
+        android:foregroundGravity="center"
+        android:text="Réserver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/calendarViewr"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
 
