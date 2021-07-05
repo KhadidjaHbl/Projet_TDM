@@ -50,16 +50,6 @@ class ListTraitementsAdapter(
             }
         }
 
-        /* holder.medView.setOnClickListener {
-             vm.idMedecin = data!!.get(position).idMedecin
-             vm.nom = data!!.get(position).nom
-             vm.prenom = data!!.get(position).prenom
-             vm.num_tel = data!!.get(position).num_tel
-             vm.nomSpecialite = data!!.get(position).nomSpecialite
-             vm.anneesExp = data!!.get(position).anneesExp
-             vm.photo = data!!.get(position).photo
-             holder.medView.findNavController().navigate(R.id.action_listFragment_to_detailFragment)
-         }*/
     }
 }
 

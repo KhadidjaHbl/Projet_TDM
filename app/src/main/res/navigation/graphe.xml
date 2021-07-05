@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graphe"
-    app:startDestination="@id/ListFragment">
+    app:startDestination="@id/TraitementFragment">
 
     <fragment
         android:id="@+id/detailFragment"
@@ -15,20 +15,14 @@
         <action
             android:id="@+id/action_detailFragment_to_rendezVFragment"
             app:destination="@id/rendezVFragment" />
-        <action
-            android:id="@+id/action_detailFragment_to_listrdvFragment"
-            app:destination="@id/listrdvFragment" />
     </fragment>
     <fragment
-        android:id="@+id/ListFragment"
+        android:id="@+id/TraitementFragment"
         android:name="com.example.tp3.ListMedecinsFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
-        <action
-            android:id="@+id/action_ListFragment_to_profileFragment3"
-            app:destination="@id/profileFragment3" />
     </fragment>
     <fragment
         android:id="@+id/fragment_advice"
@@ -40,8 +34,8 @@
         android:name="com.example.projet_tdm.Fragements.RendezVFragment"
         android:label="RendezVFragment" />
     <fragment
-        android:id="@+id/listrdvFragment"
-        android:name="com.example.projet_tdm.Fragements.listrdvFragment"
+        android:id="@+id/ListRdvFragment"
+        android:name="com.example.projet_tdm.Fragements.ListRdvFragment"
         android:label="fragment_listrdv"
         tools:layout="@layout/fragment_listrdv" >
         <action
@@ -53,9 +47,13 @@
         android:name="com.example.DetailRdvFragment"
         android:label="DetailRdvFragment" />
     <fragment
-        android:id="@+id/profileFragment3"
+        android:id="@+id/profileFragment"
         android:name="com.example.projet_tdm.Fragements.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/traitementFragment2"
+        android:name="com.example.tp3.TraitementFragment"
+        android:label="TraitementFragment" />
 
 </navigation>

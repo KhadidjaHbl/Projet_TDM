@@ -7,16 +7,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.content.edit
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.projet_tdm.Entities.Patient
-import com.example.projet_tdm.Entities.idPatient
 import com.example.projet_tdm.R
 import com.example.projet_tdm.Retrofit.RetrofitService
 import com.example.projet_tdm.url
-import kotlinx.android.synthetic.main.fragment_detail_medecin.*
-import kotlinx.android.synthetic.main.fragment_listrdv.*
 import kotlinx.android.synthetic.main.fragment_profile.*
 import kotlinx.android.synthetic.main.fragment_profile.pict
 import retrofit2.Call
@@ -53,10 +48,10 @@ class ProfileFragment : Fragment() {
                 if (response.isSuccessful) {
                     val patient = response.body()
                     nomP.text = patient?.get(0)!!.nom
-                    prenomP.text = patient?.get(0)!!.prenom
-                    ageP.text = patient?.get(0)!!.Age.toString()
-                    AdresseP.text = patient?.get(0)!!.Adresse
-                    emailP.text =patient?.get(0)!!.Email
+                    p.text = patient.get(0).prenom
+                    ageP.text = patient.get(0).Age.toString()
+                    AdresseP.text = patient.get(0).Adresse
+                    emailP.text =patient.get(0).Email
                     Glide.with(requireActivity()).load(url + "/" + (patient.get(0).photo)).into(pict)
 
                 }

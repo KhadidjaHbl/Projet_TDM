@@ -9,18 +9,16 @@
     android:layout_marginLeft="5dp"
     android:layout_marginEnd="5dp"
     android:layout_marginRight="5dp"
-    android:layout_marginBottom="10dp"
+    android:layout_marginBottom="15dp"
     android:background="#FFFFFF">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/traitement"
         android:layout_width="374dp"
-        android:layout_height="204dp"
-        android:layout_marginStart="5dp"
+        android:layout_height="180dp"
         android:layout_marginLeft="5dp"
-        android:layout_marginEnd="5dp"
         android:layout_marginRight="5dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/traitement_bg"
         android:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -137,24 +135,11 @@
             app:layout_constraintStart_toStartOf="@+id/textView14"
             app:layout_constraintTop_toBottomOf="@+id/textView14" />
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="99dp"
-            android:layout_height="41dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:background="@drawable/buttonround"
-            android:text="Detail"
-            app:backgroundTint="#1EC8B9"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
         <TextView
+            android:id="@+id/textView15"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
-            android:layout_marginLeft="12dp"
             android:layout_marginTop="36dp"
             android:fontFamily="@font/andada"
             android:text="Adresse"

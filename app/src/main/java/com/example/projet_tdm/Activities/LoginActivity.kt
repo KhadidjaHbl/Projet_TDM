@@ -26,11 +26,9 @@ class LoginActivity : AppCompatActivity() {
         val pref = getSharedPreferences("data", Context.MODE_PRIVATE)
         val Medconn = pref.getBoolean("medConnected", false)
         val Patconn = pref.getBoolean("patConnected", false)
-        val idUser = pref.getInt("idUser", 0)
 
         val patientHome = Intent(this, PatientActivity::class.java)
         val medecinHome = Intent(this, MedecinHome::class.java)
-
 
         if (Medconn) {
             startActivity(medecinHome)

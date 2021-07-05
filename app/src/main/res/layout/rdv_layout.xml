@@ -13,100 +13,124 @@
     android:background="@drawable/element_list">
 
     <TextView
-        android:id="@+id/textViewdaterdv"
+        android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_marginStart="24dp"
+        android:fontFamily="@font/andada"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewle"
-        app:layout_constraintStart_toEndOf="@+id/textViewle"
-        app:layout_constraintTop_toTopOf="@+id/textViewle"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewle"
+        app:layout_constraintStart_toStartOf="@+id/textViewle" />
 
     <TextView
         android:id="@+id/textViewle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginLeft="36dp"
         android:layout_marginTop="16dp"
-        android:text="LE"
+        android:fontFamily="@font/andada"
+        android:text="Le:"
         android:textColor="#000000"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewheurd"
+        android:id="@+id/heure_debut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="83dp"
+        android:layout_marginTop="18dp"
+        android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textViewdaterdv"
-        app:layout_constraintStart_toEndOf="@+id/textViewdaterdv" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/date"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewheurf"
+        android:id="@+id/heure_fin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewdaterdv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewdaterdv"
-        app:layout_constraintVertical_bias="1.0" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginLeft="18dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:text="-"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewheurf"
-        app:layout_constraintStart_toEndOf="@+id/textViewheurd"
-        app:layout_constraintTop_toTopOf="@+id/textViewheurd" />
+        android:layout_width="17dp"
+        android:layout_height="18dp"
+        android:fontFamily="@font/andada"
+        android:text="->"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heure_debut"
+        app:layout_constraintEnd_toStartOf="@+id/heure_fin"
+        app:layout_constraintStart_toEndOf="@+id/heure_debut" />
 
     <TextView
-        android:id="@+id/nomMed"
+        android:id="@+id/nomM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewle"
-        app:layout_constraintTop_toBottomOf="@+id/textViewdaterdv" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date" />
 
     <TextView
-        android:id="@+id/textViewspecrd"
+        android:id="@+id/spec"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/andada"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@+id/textViewheurf"
-        tools:layout_editor_absoluteY="60dp" />
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prenomM"
+        app:layout_constraintStart_toStartOf="@+id/heure_debut" />
 
     <TextView
-        android:id="@+id/prenomMed"
+        android:id="@+id/prenomM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="46dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/andada"
         android:text="TextView"
-        app:layout_constraintStart_toEndOf="@+id/nomMed"
-        app:layout_constraintTop_toBottomOf="@+id/textViewheurd" />
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/nomM"
+        app:layout_constraintStart_toEndOf="@+id/nomM" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="24dp"
+        android:fontFamily="@font/andada"
+        android:text="Dr."
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/nomM"
+        app:layout_constraintStart_toStartOf="@+id/textViewle"
+        app:layout_constraintTop_toBottomOf="@+id/textViewle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

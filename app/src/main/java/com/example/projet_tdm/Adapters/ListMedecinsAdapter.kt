@@ -16,7 +16,11 @@ import com.example.projet_tdm.url
 import com.example.tp3.MedecinViewModel
 
 
-class ListMedecinsAdapter(val context: Context, var data: List<MedecinViewModel>?, val vm: MedecinViewModel) :
+class ListMedecinsAdapter(
+    val context: Context,
+    var data: List<MedecinViewModel>?,
+    val vm: MedecinViewModel
+) :
 
     RecyclerView.Adapter<ListMedecinsAdapter.MyViewHolder>() {
 
@@ -54,7 +58,7 @@ class ListMedecinsAdapter(val context: Context, var data: List<MedecinViewModel>
         holder.icone.setOnClickListener {
             val latitude = data!!.get(position).latitude
             val longitude = data!!.get(position).longitude
-            val geoLocation = Uri.parse("geo:$latitude,$longitude")
+            val geoLocation = Uri.parse("http://maps.google.com/maps?daddr=" + latitude + "," + longitude)
             val intent = Intent(Intent.ACTION_VIEW, geoLocation)
             context.startActivity(intent)
         }
@@ -67,7 +71,6 @@ class ListMedecinsAdapter(val context: Context, var data: List<MedecinViewModel>
             vm.nomSpecialite = data!!.get(position).nomSpecialite
             vm.anneesExp = data!!.get(position).anneesExp
             vm.photo = data!!.get(position).photo
-
             holder.medView.findNavController().navigate(R.id.action_listFragment_to_detailFragment)
         }
     }

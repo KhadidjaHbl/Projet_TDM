@@ -17,7 +17,7 @@
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/imgUser"
+                android:id="@+id/img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -53,7 +53,7 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/prenomP"
+                android:id="@+id/p"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"

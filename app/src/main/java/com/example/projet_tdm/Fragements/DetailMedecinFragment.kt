@@ -53,12 +53,9 @@ class DetailMedecinFragment : Fragment() {
             conseil.findNavController()
                 .navigate(R.id.action_detailFragment_to_fragment_advice, bundle)
         }
-        rdvgo.setOnClickListener(){
-            rdvgo.findNavController().navigate(R.id.action_detailFragment_to_listrdvFragment)
-        }
 
         rdv.setOnClickListener() {
-            var bundle = bundleOf("idmedecin" to (vm.idMedecin))
+            //var bundle = bundleOf("idmedecin" to (vm.idMedecin))
             rdv.findNavController().navigate(R.id.action_detailFragment_to_rendezVFragment)
         }
     }

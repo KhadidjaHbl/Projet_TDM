@@ -2,152 +2,181 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentdetailrdv"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginTop="100dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginBottom="10dp"
+    android:background="@drawable/traitement_bg"
+    android:paddingBottom="19dp">
 
     <TextView
-        android:id="@+id/textViewheurf3"
+        android:id="@+id/heureF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginRight="36dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="308dp"
+        android:fontFamily="@font/andada"
         android:text="TextView"
+        android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
+        app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/special"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="9dp"
-        android:layout_marginRight="9dp"
-        android:text="-"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewheurf3"
-        app:layout_constraintEnd_toStartOf="@+id/textViewheurf3"
-        app:layout_constraintTop_toTopOf="@+id/textViewheurd3"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textViewspecrd3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/andada"
+        android:paddingBottom="20dp"
         android:text="textview"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewprenommed3"
-        app:layout_constraintStart_toEndOf="@+id/textViewprenommed3"
-        app:layout_constraintTop_toTopOf="@+id/textViewprenommed3"
-        app:layout_constraintVertical_bias="0.0" />
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nomMed" />
 
     <TextView
         android:id="@+id/textViewle3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="32dp"
-        android:text="LE"
+        android:layout_marginStart="48dp"
+        android:fontFamily="@font/andada"
+        android:text="Le:"
+        android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateRdv"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textViewprenommed3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="72dp"
-        android:layout_marginRight="72dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewnommed3"
-        app:layout_constraintEnd_toEndOf="@+id/textViewprenompat"
-        app:layout_constraintTop_toTopOf="@+id/textViewnommed3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textViewprenompat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="100dp"
-        android:layout_marginRight="100dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewnomp" />
-
-    <TextView
-        android:id="@+id/textViewnommed3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textViewnomp" />
-
-    <TextView
-        android:id="@+id/textViewnomp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toStartOf="@+id/textViewprenompat"
-        app:layout_constraintHorizontal_bias="0.488"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewdaterdv3" />
-
-    <TextView
-        android:id="@+id/textViewheurd3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
-        android:text="TextView"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewheurf3"
-        app:layout_constraintEnd_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toTopOf="@+id/textViewheurf3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textViewdaterdv3"
+        android:id="@+id/prenomPat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
-        android:layout_marginLeft="12dp"
-        android:text="textview"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/andada"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/nomPat"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewQr" />
+
+    <TextView
+        android:id="@+id/nomMed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/andada"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
+        app:layout_constraintStart_toEndOf="@+id/textView19" />
+
+    <TextView
+        android:id="@+id/nomPat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/andada"
+        android:text="TextView"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewQr" />
+
+    <TextView
+        android:id="@+id/heureD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/andada"
+        android:text="TextView"
+        android:textColor="#000000"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewle3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/dateRdv"
+        app:layout_constraintStart_toEndOf="@+id/dateRdv" />
+
+    <TextView
+        android:id="@+id/dateRdv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/andada"
+        android:text="textview"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintStart_toEndOf="@+id/textViewle3"
-        app:layout_constraintTop_toTopOf="@+id/textViewle3"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="123dp"
         android:layout_marginTop="28dp"
-        android:text="vous avez un rendez-vous chez"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="@+id/textViewprenompat"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="@+id/textViewnomp"
-        app:layout_constraintTop_toBottomOf="@+id/textViewnomp" />
+        android:layout_marginEnd="137dp"
+        android:fontFamily="@font/andada"
+        android:text="Un Rendez-Vous"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/prenomPat" />
 
     <ImageView
         android:id="@+id/imageViewQr"
+        android:layout_width="119dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="137dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView16"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewprenommed3"
-        tools:src="@tools:sample/avatars" />
+        android:layout_marginStart="1dp"
+        android:fontFamily="@font/andada"
+        android:shadowColor="#000000"
+        android:text="->"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heureD"
+        app:layout_constraintStart_toEndOf="@+id/heureD" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/andada"
+        android:text="Chez"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/dateRdv" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/andada"
+        android:text="Dr."
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/textView18"
+        app:layout_constraintTop_toBottomOf="@+id/heureD" />
 </androidx.constraintlayout.widget.ConstraintLayout>

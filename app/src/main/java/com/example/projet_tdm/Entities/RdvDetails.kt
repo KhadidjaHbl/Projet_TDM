@@ -6,7 +6,7 @@ import androidx.room.Entity
 @Entity(
     tableName = "infordv"
 )
-data class infordv(
+data class RdvDetails(
     var idRdv:Int=0,
     var idMedecin:Int=0,
     var idPatient:Int=0,

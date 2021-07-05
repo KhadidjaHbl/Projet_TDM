@@ -21,15 +21,14 @@ class DetailRdvFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         val vm= ViewModelProvider(requireActivity()).get(RdvViewModel::class.java)
-        textViewnomp.text=vm.nomp
-        textViewprenompat.text=vm.prenomp
-        textViewdaterdv3.text=vm.Date_Rdv
-        textViewheurd3.text=vm.Heure_Debut
-        textViewheurf3.text=vm.Heure_Fin
+        nomPat.text=vm.nomp
+        prenomPat.text=vm.prenomp
+        dateRdv.text=vm.Date_Rdv
+        heureD.text=vm.Heure_Debut
+        heureF.text=vm.Heure_Fin
 
-        textViewnommed3.text=vm.nommed
-        textViewprenommed3.text=vm.prenommed
-        textViewspecrd3.text=vm.nomSpecialite
+        nomMed.text=vm.nommed
+        special.text=vm.nomSpecialite
         //*********************QR****************
 
         val content = "Patient: "+vm.nomp+"--"+vm.prenomp+" a rendez vous le "+vm.Date_Rdv+" a "+vm.Heure_Debut+" chez Dr "+vm.nomp+" "+vm.prenomp
@@ -56,6 +55,5 @@ class DetailRdvFragment : Fragment() {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_detail_rdv, container, false)
     }
-
 
 }

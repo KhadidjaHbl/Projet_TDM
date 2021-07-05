@@ -11,20 +11,18 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.projet_tdm.Adapters.RdvAdapter
 import com.example.projet_tdm.Entities.idPatient
-import com.example.projet_tdm.Entities.infordv
-import com.example.projet_tdm.Entities.patmed
+import com.example.projet_tdm.Entities.RdvDetails
+import com.example.projet_tdm.Entities.RdvPatientMed
 import com.example.projet_tdm.R
 import com.example.projet_tdm.Retrofit.RetrofitService
 import com.example.projet_tdm.ViewModels.RdvViewModel
-import com.example.projet_tdm.ViewModels.TraitementViewModel
 import kotlinx.android.synthetic.main.fragment_listrdv.*
-import kotlinx.android.synthetic.main.fragment_traitement.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 
-class listrdvFragment : Fragment() {
+class ListRdvFragment : Fragment() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,14 +47,14 @@ class listrdvFragment : Fragment() {
     }
 
     fun getRdvs() {
-        val patmed = patmed(0, idPatient, "")
+        val patmed = RdvPatientMed(0, idPatient, "")
         Toast.makeText(context, "piattttt"+ idPatient, Toast.LENGTH_SHORT).show()
         val call = RetrofitService.endpoint.getmyrdvs(patmed)
-        call.enqueue(object : Callback<List<infordv>> {
+        call.enqueue(object : Callback<List<RdvDetails>> {
 
             override fun onResponse(
-                call: Call<List<infordv>>,
-                response: Response<List<infordv>>
+                call: Call<List<RdvDetails>>,
+                response: Response<List<RdvDetails>>
             ) {
                 if (response.code() == 200) {
                     val data = response.body()
@@ -74,7 +72,7 @@ class listrdvFragment : Fragment() {
                 }
             }
 
-            override fun onFailure(call: Call<List<infordv>>, t: Throwable) {
+            override fun onFailure(call: Call<List<RdvDetails>>, t: Throwable) {
                 Toast.makeText(context, "UNE ERREUR S'EST PRODUITE", Toast.LENGTH_SHORT).show()
             }
         });

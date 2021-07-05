@@ -28,15 +28,15 @@ interface EndPoint {
     fun addConseils(@Body teams: List<Conseil>): Call<String>
 
     @POST("getRdv")
-    fun getRdv(@Body patmed: patmed): Call<List<rdv>>
+    fun getRdv(@Body RdvPatientMed: RdvPatientMed): Call<List<Rdv>>
 
     @POST("getAgenda")
-    fun getAgenda(@Body patmed: patmed): Call<List<agenda>>
+    fun getAgenda(@Body RdvPatientMed: RdvPatientMed): Call<List<Agenda>>
 
     @POST("addrdv")
-    fun addrdv(@Body rdv: rdv): Call<String>
+    fun addrdv(@Body rdv: Rdv): Call<String>
 
     @POST("getmyrdvs")
-    fun getmyrdvs(@Body patmed: patmed): Call<List<infordv>>
+    fun getmyrdvs(@Body RdvPatientMed: RdvPatientMed): Call<List<RdvDetails>>
 
 }

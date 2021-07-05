@@ -6,17 +6,13 @@ import androidx.room.PrimaryKey
 import java.io.Serializable
 import java.util.*
 
-
 @Entity(
-    tableName = "rdv"
+    tableName = "patmed"
 )
-data class rdv(
-    var idRdv:Int =0,
+data class RdvPatientMed(
     var idMedecin:Int=0,
-    var idPatient:Int,
-    var Heure_Debut:String="",
-    var Heure_Fin:String="",
-    var Date_Rdv:String
+    var idUser:Int?,
+    var Date_Rdv:String=""
 )
 
 

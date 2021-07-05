@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/home"
+
+    <item android:id="@+id/TraitementFragment"
         android:title="Home"
         android:icon="@drawable/home"/>
     <item
-        android:id="@+id/traitements"
+        android:id="@+id/traitementFragment2"
         android:title="Traitements"
         android:icon="@drawable/treatments"/>
+
+    <item android:id="@+id/ListRdvFragment"
+        android:title="Rdv"
+        android:icon="@drawable/rdv"/>
+
     <item
-        android:id="@+id/profil"
+        android:id="@+id/profileFragment"
         android:title="Profil"
         android:icon="@drawable/profile"/>
 

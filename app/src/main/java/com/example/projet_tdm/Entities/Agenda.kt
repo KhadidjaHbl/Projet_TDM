@@ -8,12 +8,15 @@ import java.util.*
 
 
 @Entity(
-    tableName = "patmed"
+    tableName = "agenda"
 )
-data class patmed(
+data class Agenda(
     var idMedecin:Int=0,
-    var idUser:Int?,
-    var Date_Rdv:String=""
+    var temps_matin_debut:String="",
+    var temps_matin_fin:String="",
+    var temps_soir_debut:String="",
+    var temps_soir_fin:String="",
+    var Jour:String=""
 )
 
 

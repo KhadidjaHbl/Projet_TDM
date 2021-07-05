@@ -8,15 +8,15 @@ import java.util.*
 
 
 @Entity(
-    tableName = "agenda"
+    tableName = "rdv"
 )
-data class agenda(
+data class Rdv(
+    var idRdv:Int =0,
     var idMedecin:Int=0,
-    var temps_matin_debut:String="",
-    var temps_matin_fin:String="",
-    var temps_soir_debut:String="",
-    var temps_soir_fin:String="",
-    var Jour:String=""
+    var idPatient:Int,
+    var Heure_Debut:String="",
+    var Heure_Fin:String="",
+    var Date_Rdv:String
 )
 
 

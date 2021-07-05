@@ -33,7 +33,7 @@ class AdviceFragment : Fragment() {
         var idUser = pref.getInt("idUser", 0)
         Toast.makeText(context, "iddd"+idUser, Toast.LENGTH_SHORT).show()
 
-        send.setOnClickListener() { View ->
+        send.setOnClickListener() {
             val cont: String = message.text.toString()
             val id = arguments?.getInt("idmedecin")
             val conseilContent = Conseil(idUser, cont, id, 0)

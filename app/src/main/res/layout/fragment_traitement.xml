@@ -13,50 +13,45 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/ListFragment"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/TraitementFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:paddingBottom="30dp">
 
 
         <TextView
-            android:id="@+id/prenomP"
+            android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="38dp"
-            android:fontFamily="@font/autour_one"
-            android:textColor="#054171"
-            android:textSize="22sp"
-            android:textStyle="bold"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="68dp"
+            android:fontFamily="@font/andada"
+            android:text="Vos traitements en cours .."
+            android:textColor="#1EC8B9"
+            android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView5"
-            android:layout_width="333dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="76dp"
-            android:layout_marginEnd="44dp"
-            android:layout_marginRight="44dp"
+            android:id="@+id/p"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="64dp"
             android:fontFamily="@font/autour_one"
-            android:text="Voici la liste de vos traitements en cours .."
             android:textColor="#054171"
             android:textSize="20sp"
-            android:textStyle="normal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.166"
-            app:layout_constraintStart_toStartOf="@+id/prenomP"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/listTraitements"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
             android:layout_marginLeft="5dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="5dp"
+            android:layout_marginTop="28dp"
             android:layout_marginRight="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
