@@ -6,14 +6,76 @@
     android:layout_height="match_parent"
     tools:context=".Activities.MedecinHome">
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="324dp"
-        android:text="medeciiin"
-        android:textSize="30sp"
+        android:layout_marginTop="4dp"
+        android:background="@android:color/transparent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:menu="@menu/exit_menu" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/navigation_host"
+        app:layout_constraintVertical_bias="1.0"
+        app:menu="@menu/menu" >
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:id="@+id/zxscan"
+        android:layout_width="364dp"
+        android:layout_height="511dp"
+        android:layout_marginBottom="96dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.659"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_result"
+            android:layout_width="344dp"
+            android:layout_height="153dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="300dp"
+            android:background="@drawable/traitement_bg"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="393dp"
+                android:layout_height="54dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/andada"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/resultt"
+            android:layout_width="289dp"
+            android:layout_height="218dp"
+            android:text="TextView" />
+
+    </me.dm7.barcodescanner.zxing.ZXingScannerView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -27,7 +27,6 @@ class ListRdvFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -48,10 +47,8 @@ class ListRdvFragment : Fragment() {
 
     fun getRdvs() {
         val patmed = RdvPatientMed(0, idPatient, "")
-        Toast.makeText(context, "piattttt"+ idPatient, Toast.LENGTH_SHORT).show()
         val call = RetrofitService.endpoint.getmyrdvs(patmed)
         call.enqueue(object : Callback<List<RdvDetails>> {
-
             override fun onResponse(
                 call: Call<List<RdvDetails>>,
                 response: Response<List<RdvDetails>>
@@ -71,7 +68,6 @@ class ListRdvFragment : Fragment() {
                     Toast.makeText(context, "UNE ERREUR S'EST PRODUITE else", Toast.LENGTH_SHORT).show()
                 }
             }
-
             override fun onFailure(call: Call<List<RdvDetails>>, t: Throwable) {
                 Toast.makeText(context, "UNE ERREUR S'EST PRODUITE", Toast.LENGTH_SHORT).show()
             }

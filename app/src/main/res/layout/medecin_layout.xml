@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/medecin"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_marginLeft="10dp"
     android:layout_marginRight="10dp"
-    android:layout_height="wrap_content">
+    android:layout_marginBottom="15dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="364dp"
         android:layout_height="126dp"
-        android:layout_marginBottom="6dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/element_list"
         android:elevation="3dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -26,6 +27,7 @@
             android:fontFamily="@font/arima_madurai_medium"
             android:text="TextView"
             android:textColor="#000000"
+            android:textSize="13sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView4"
             app:layout_constraintStart_toEndOf="@+id/textView4" />
 
@@ -37,6 +39,7 @@
             android:fontFamily="@font/arima_madurai_medium"
             android:text="TextView"
             android:textColor="#000000"
+            android:textSize="13sp"
             app:layout_constraintBaseline_toBaselineOf="@+id/nom"
             app:layout_constraintStart_toEndOf="@+id/nom" />
 
@@ -48,6 +51,7 @@
             android:fontFamily="@font/arima_madurai_medium"
             android:text="TextView"
             android:textColor="#000000"
+            android:textSize="13sp"
             app:layout_constraintStart_toStartOf="@+id/specialite"
             app:layout_constraintTop_toBottomOf="@+id/specialite" />
 
@@ -59,6 +63,7 @@
             android:fontFamily="@font/arima_madurai_medium"
             android:text="TextView"
             android:textColor="#000000"
+            android:textSize="13sp"
             app:layout_constraintStart_toStartOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,12 +85,11 @@
             android:layout_width="26dp"
             android:layout_height="24dp"
             android:layout_marginStart="20dp"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="28dp"
             android:fontFamily="@font/arima_madurai_medium"
             android:text="Dr."
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="15sp"
             app:layout_constraintStart_toEndOf="@+id/photo"
             app:layout_constraintTop_toTopOf="parent" />
 

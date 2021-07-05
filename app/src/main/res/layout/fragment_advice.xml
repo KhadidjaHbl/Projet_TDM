@@ -20,8 +20,8 @@
 
     <EditText
         android:id="@+id/message"
-        android:layout_width="304dp"
-        android:layout_height="168dp"
+        android:layout_width="291dp"
+        android:layout_height="146dp"
         android:layout_marginTop="60dp"
         android:background="#FFFFFF"
         android:drawableStart="@drawable/msg"
@@ -29,6 +29,7 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:paddingLeft="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,21 +46,22 @@
         app:backgroundTint="#1EC8B9"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.613"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/message"
-        app:layout_constraintVertical_bias="0.365" />
+        app:layout_constraintVertical_bias="0.278" />
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="248dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="27dp"
+        android:layout_width="325dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="28dp"
         android:fontFamily="@font/autour_one"
-        android:text="Demander un conseil"
+        android:text="      Demander un conseil"
         android:textColor="#100F0F"
-        android:textSize="18sp"
+        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 

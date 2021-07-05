@@ -21,6 +21,7 @@ class RdvAdapter(val context: Context, var data: List<RdvDetails>, val vm: RdvVi
         val prenom = view.findViewById<TextView>(R.id.prenomM) as TextView
         val heurd = view.findViewById<TextView>(R.id.heure_debut) as TextView
         val heurf = view.findViewById<TextView>(R.id.heure_fin) as TextView
+//        val age = view.findViewById<TextView>(R.id.Age) as TextView
         val specialite = view.findViewById<TextView>(R.id.spec) as TextView
         val rdvView = view.findViewById<ConstraintLayout>(R.id.rdvv) as ConstraintLayout
     }
@@ -40,6 +41,7 @@ class RdvAdapter(val context: Context, var data: List<RdvDetails>, val vm: RdvVi
         holder.heurd.text = data[position].Heure_Debut
         holder.heurf.text = data[position].Heure_Fin
         holder.specialite.text = data[position].nomSpecialite
+       // holder.age.text = data[position].Age.toString()
 
         holder.rdvView.setOnClickListener {
             vm.nommed = data[position].nommed
@@ -53,6 +55,7 @@ class RdvAdapter(val context: Context, var data: List<RdvDetails>, val vm: RdvVi
             vm.idMedecin = data[position].idMedecin
             vm.idPatient = data[position].idPatient
             vm.idRdv = data[position].idRdv
+           // vm.Age = data[position].Age
 
             holder.rdvView.findNavController()
                 .navigate(R.id.action_listrdvFragment_to_detailRdvFragment)

@@ -23,7 +23,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="120dp"
                 android:layout_marginTop="45dp"
-                android:background="@drawable/circle_border">
+                android:background="@drawable/circle_border"
+                android:foregroundGravity="center"
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/pict"
@@ -47,6 +49,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_marginTop="10dp"
+                android:gravity="center"
                 android:text="nom"
                 android:textColor="#fff"
                 android:textSize="22sp"

@@ -20,7 +20,7 @@
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView16"
         app:layout_constraintStart_toEndOf="@+id/textView16"
         app:layout_constraintTop_toTopOf="parent" />
@@ -34,7 +34,7 @@
         android:paddingBottom="20dp"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nomMed" />
@@ -47,7 +47,7 @@
         android:fontFamily="@font/andada"
         android:text="Le:"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/dateRdv"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -55,12 +55,12 @@
         android:id="@+id/prenomPat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/nomPat"
         app:layout_constraintTop_toBottomOf="@+id/imageViewQr" />
 
@@ -72,7 +72,7 @@
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/textView19"
         app:layout_constraintStart_toEndOf="@+id/textView19" />
 
@@ -80,12 +80,12 @@
         android:id="@+id/nomPat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="72dp"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewQr" />
 
@@ -97,7 +97,7 @@
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/dateRdv"
         app:layout_constraintStart_toEndOf="@+id/dateRdv" />
 
@@ -105,12 +105,12 @@
         android:id="@+id/dateRdv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         android:fontFamily="@font/andada"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textViewle3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -124,7 +124,7 @@
         android:fontFamily="@font/andada"
         android:text="Un Rendez-Vous"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,7 +151,7 @@
         android:shadowColor="#000000"
         android:text="->"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/heureD"
         app:layout_constraintStart_toEndOf="@+id/heureD" />
 
@@ -163,7 +163,7 @@
         android:fontFamily="@font/andada"
         android:text="Chez"
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/dateRdv" />
 
@@ -176,7 +176,31 @@
         android:fontFamily="@font/andada"
         android:text="Dr."
         android:textColor="#000000"
-        android:textSize="18sp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/textView18"
         app:layout_constraintTop_toBottomOf="@+id/heureD" />
+
+    <TextView
+        android:id="@+id/Age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/andada"
+        android:text="Text"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/prenomPat"
+        app:layout_constraintStart_toEndOf="@+id/prenomPat" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:fontFamily="@font/andada"
+        android:text="Ans"
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/Age"
+        app:layout_constraintStart_toEndOf="@+id/Age" />
 </androidx.constraintlayout.widget.ConstraintLayout>

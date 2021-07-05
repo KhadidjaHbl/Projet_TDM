@@ -5,10 +5,8 @@
     android:id="@+id/rdvv"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:layout_marginStart="10dp"
-    android:layout_marginLeft="10dp"
-    android:layout_marginEnd="10dp"
-    android:layout_marginRight="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
     android:layout_marginBottom="18dp"
     android:background="@drawable/element_list">
 
@@ -20,8 +18,8 @@
         android:fontFamily="@font/andada"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/textViewle"
         app:layout_constraintStart_toStartOf="@+id/textViewle" />
 
@@ -34,8 +32,8 @@
         android:fontFamily="@font/andada"
         android:text="Le:"
         android:textColor="#000000"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,13 +41,13 @@
         android:id="@+id/heure_debut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="83dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="16dp"
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/date"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,39 +55,41 @@
         android:id="@+id/heure_fin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
         android:layout_marginEnd="20dp"
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent" />
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heure_debut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="17dp"
         android:layout_height="18dp"
+        android:layout_marginStart="4dp"
         android:fontFamily="@font/andada"
         android:text="->"
         android:textColor="#000000"
-        android:textSize="16sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/heure_debut"
-        app:layout_constraintEnd_toStartOf="@+id/heure_fin"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/heure_fin"
         app:layout_constraintStart_toEndOf="@+id/heure_debut" />
 
     <TextView
         android:id="@+id/nomM"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/date"
-        app:layout_constraintTop_toBottomOf="@+id/date" />
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView13"
+        app:layout_constraintStart_toStartOf="@+id/date" />
 
     <TextView
         android:id="@+id/spec"
@@ -98,8 +98,8 @@
         android:fontFamily="@font/andada"
         android:text="textview"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/prenomM"
         app:layout_constraintStart_toStartOf="@+id/heure_debut" />
 
@@ -111,8 +111,8 @@
         android:fontFamily="@font/andada"
         android:text="TextView"
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textStyle="normal"
         app:layout_constraintBaseline_toBaselineOf="@+id/nomM"
         app:layout_constraintStart_toEndOf="@+id/nomM" />
 
@@ -126,8 +126,8 @@
         android:fontFamily="@font/andada"
         android:text="Dr."
         android:textColor="#000000"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        android:textSize="15sp"
+        android:textStyle="normal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/nomM"
         app:layout_constraintStart_toStartOf="@+id/textViewle"

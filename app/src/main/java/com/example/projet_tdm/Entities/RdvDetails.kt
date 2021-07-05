@@ -9,6 +9,7 @@ import androidx.room.Entity
 data class RdvDetails(
     var idRdv:Int=0,
     var idMedecin:Int=0,
+    //val Age:Int=0,
     var idPatient:Int=0,
     var Heure_Debut:String="" ,
     var Heure_Fin:String="" ,
@@ -18,5 +19,4 @@ data class RdvDetails(
     var nommed:String="",
     var prenommed:String="",
     var nomSpecialite: String=""
-
 )

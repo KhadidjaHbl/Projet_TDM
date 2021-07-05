@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/graphe"
-    app:startDestination="@id/TraitementFragment">
+    app:startDestination="@id/HomeFragment">
 
     <fragment
         android:id="@+id/detailFragment"
@@ -17,12 +17,15 @@
             app:destination="@id/rendezVFragment" />
     </fragment>
     <fragment
-        android:id="@+id/TraitementFragment"
+        android:id="@+id/HomeFragment"
         android:name="com.example.tp3.ListMedecinsFragment"
         android:label="ListFragment" >
         <action
             android:id="@+id/action_listFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_HomeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_advice"

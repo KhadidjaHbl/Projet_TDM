@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="342dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="@+id/calendarViewr"
+        app:layout_constraintTop_toBottomOf="@+id/calendarViewr" />
 
     <CalendarView
         android:id="@+id/calendarViewr"
@@ -19,34 +32,21 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="342dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.272"
-        app:layout_constraintStart_toStartOf="@+id/calendarViewr"
-        app:layout_constraintTop_toBottomOf="@+id/calendarViewr" />
-
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="115dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="68dp"
         android:layout_marginBottom="26dp"
-        android:fontFamily="@font/artifika"
+        android:fontFamily="@font/andada"
         android:foregroundGravity="center_vertical"
         android:gravity="center"
-        android:text="Réservez un Rendez-Vous"
+        android:text="Réservez un Rendez-Vous.."
         android:textColor="#22C6B9"
         android:textSize="18sp"
-        android:textStyle="bold"
+        android:textStyle="normal|bold"
         app:layout_constraintBottom_toTopOf="@+id/calendarViewr"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
@@ -56,16 +56,17 @@
         android:layout_width="211dp"
         android:layout_height="47dp"
         android:layout_marginStart="93dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="94dp"
         android:background="@drawable/buttonround"
         android:backgroundTint="#22C6B9"
         android:foregroundGravity="center"
         android:text="Réserver"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
